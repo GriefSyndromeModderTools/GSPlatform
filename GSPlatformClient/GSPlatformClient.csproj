@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA68E8AB-BA02-4B3A-B875-3B36ABA55687}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GSPlatformClient</RootNamespace>
+    <AssemblyName>GSPlatformClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AMLCore">
+      <HintPath>..\..\..\AML2\AMLCore\bin\Release\AMLCore.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddRoomDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRoomDialog.Designer.cs">
+      <DependentUpon>AddRoomDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GSPlatformClientDescription.cs" />
+    <Compile Include="GSPlatformClientEntry.cs" />
+    <Compile Include="LaunchStatusDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaunchStatusDialog.Designer.cs">
+      <DependentUpon>LaunchStatusDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LaunchStatusTaskPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LaunchStatusTaskPanel.Designer.cs">
+      <DependentUpon>LaunchStatusTaskPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageHeader.cs" />
+    <Compile Include="PeerPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PeerPanel.Designer.cs">
+      <DependentUpon>PeerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterDialog.Designer.cs">
+      <DependentUpon>RegisterDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResizeTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ResizeTest.Designer.cs">
+      <DependentUpon>ResizeTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomClient.cs" />
+    <Compile Include="RoomImage.cs" />
+    <Compile Include="RoomPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RoomPanel.Designer.cs">
+      <DependentUpon>RoomPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ServerPanel.Designer.cs">
+      <DependentUpon>ServerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UdpClient.cs" />
+    <Compile Include="Unsafe.cs" />
+    <Compile Include="UserTokenSelectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserTokenSelectionDialog.Designer.cs">
+      <DependentUpon>UserTokenSelectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserTokenStorage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddRoomDialog.resx">
+      <DependentUpon>AddRoomDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaunchStatusDialog.resx">
+      <DependentUpon>LaunchStatusDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaunchStatusTaskPanel.resx">
+      <DependentUpon>LaunchStatusTaskPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeerPanel.resx">
+      <DependentUpon>PeerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterDialog.resx">
+      <DependentUpon>RegisterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResizeTest.resx">
+      <DependentUpon>ResizeTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomPanel.resx">
+      <DependentUpon>RoomPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerPanel.resx">
+      <DependentUpon>ServerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserTokenSelectionDialog.resx">
+      <DependentUpon>UserTokenSelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="unknown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="room0.png" />
+    <EmbeddedResource Include="room1.png" />
+    <EmbeddedResource Include="room2.png" />
+    <EmbeddedResource Include="room3.png" />
+    <EmbeddedResource Include="room4.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) E:\Games\aml_pack\aml\mods</PostBuildEvent>
+  </PropertyGroup>
+</Project>

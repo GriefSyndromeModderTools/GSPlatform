@@ -1,0 +1,16 @@
+LoginHelper._recentUserLogins没有人删除旧数据
+同时，不知道为什么会短时间内加入重复的内容
+！需要加入log，来显示_recentLogins的内容
+
+从Client来看，服务器确实返回了成功的数据，说明Join返回了成功
+Client在发送了几次server ping后无应答，直接断开了
+去掉了断开的逻辑，但是仍然无应答
+！需要加回来
+	加了
+
+目前看起来可能是UDP线程卡住了
+考虑到几乎所有逻辑都在try里，可能是.Available报错了，加了一个重启逻辑
+
+目前看起来Ctrl+C的退出仍然不能立即结束进程，是因为ThreadEntry外层的while没有加条件
+现在已经改了
+因为只影响Ctrl+C，所以暂时没有改服务器，下次发布时一并处理就好
